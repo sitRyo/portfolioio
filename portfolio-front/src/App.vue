@@ -11,6 +11,9 @@
       <router-link to="/contact" class="nav-element">連絡先</router-link>
     </nav>
     <router-view/>
+    <footer>
+      <span class="footer-text">Ryota Gunji from 2019</span>
+    </footer>
   </div>
 </template>
 
@@ -76,6 +79,19 @@ nav {
   padding-block-end: .5em;
   transition-duration: 1s;
   border-radius: 3px;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+.footer-text {
+  color: #aaaaaa;
+  font-weight: 600;
 }
 
 a:hover {
