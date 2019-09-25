@@ -7,20 +7,24 @@
     <nav>
       <router-link to="/" class="nav-element">ホーム</router-link>
       <router-link to="/about" class="nav-element">製作物</router-link>
-      <router-link to="/blog" class="nav-element">ブログ</router-link>
+      <router-link to="/blog" class="nav-element">ブログ/Qiita</router-link>
       <router-link to="/contact" class="nav-element">連絡先</router-link>
     </nav>
     <router-view/>
-    <footer>
-      <span class="footer-text">Ryota Gunji from 2019</span>
+    <footer class="pt-5 pb-3">
+      <span class="footer-text">Ryota Gunji Since 2019</span>
     </footer>
   </div>
 </template>
 
 <style>
+#app {
+  background-color: #f8f8f8;
+}
+
 header {
   position: relative;
-  height: 30vh;
+  height: 50vh;
   background: url(./assets/header-portfolio2.jpg) center / cover;
 }
 
@@ -86,7 +90,7 @@ footer {
   width: 100%;
   text-align: center;
   margin-block-start: 1em;
-  margin-block-end: 1em;
+  /* margin-block-end: 1em; */
 }
 
 .footer-text {
