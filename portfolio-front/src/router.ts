@@ -14,9 +14,9 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/skill',
-      name: 'skill',
-      component: () => import('./views/Skill.vue'),
+      path: '/portfolios',
+      name: 'portfolios',
+      component: () => import('./views/Portfolios.vue'),
     },
     {
       path: '/blog',

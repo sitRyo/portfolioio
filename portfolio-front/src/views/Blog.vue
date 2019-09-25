@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
-    <h1>blog</h1>
-  </div>
+  <b-container class="blog">
+    
+  </b-container>
 </template>

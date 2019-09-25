@@ -25,35 +25,32 @@
 header {
   position: relative;
   height: 50vh;
-  background: url(./assets/header-portfolio2.jpg) center / cover;
+  background: url(./assets/header1.png) center / cover;
 }
 
 header h1 {
   position: absolute;
-  text-align: center;
+  text-align: left;
 	z-index: 1;
-	top: 50%;
 	width: 100%;
 	margin: 0;
 	padding: 0.5em;
 	color: #fff;
-	font-size: 5rem;
+	font-size: 3rem;
 	font-family: "Dosis", sans-serif;
 	letter-spacing: .1em;
-	transform: translateY(-50%);
 }
 
 header h2 {
   position: absolute;
-  text-align: center;
+  text-align: left;
   z-index: 1;
-  top: 70%;
+  top: 15%;
   width: 100%;
   margin: 0;
-  padding: 0.5em;
+  padding: .5em 0 0 1em;
   color: #fff;
-  font-size: 2rem;
-  transform: translateY(-50%);
+  font-size: 1.5rem;
 }
 
 nav {

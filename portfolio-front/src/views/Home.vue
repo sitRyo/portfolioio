@@ -1,9 +1,9 @@
 <template>
   <b-container class="home">
     <div>
-      <div class="profile pt-5">
+      <div class="profile pt-5 pb-5">
       <i class="fas fa-address-card fa-3x pr-3"></i>
-      <span class="profile-title">Profile</span>
+      <span class="title">Profile</span>
       <b-row class="pt-4">
         <b-col>
           <img src="../assets/risu.jpg" class="profile-image pt-4" height="229" width="314">
@@ -26,6 +26,11 @@
         </b-col>
       </b-row>
       </div>
+      <div class="skills pt-5">
+        <i class="fas fa-bookmark fa-3x pr-3 pb-5"></i>
+        <span class="title">SKILLS</span>
+        <skill></skill>
+      </div>
     </div>
   </b-container>
 </template>
@@ -34,7 +39,13 @@
 import { Component, Vue } from 'vue-property-decorator';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import Skill from '@/components/Skill.vue';
 
+@Component({
+  components: {
+    Skill,
+  },
+})
 export default class Home extends Vue {}
 </script>
 
@@ -44,7 +55,7 @@ export default class Home extends Vue {}
 }
 
 
-.profile-title {
+.title {
   text-align: center;
   font-weight: 900;
   letter-spacing: .05em;
