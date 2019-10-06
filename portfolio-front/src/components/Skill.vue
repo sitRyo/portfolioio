@@ -4,11 +4,8 @@
     <!-- <template v-for="data in cardData"> -->
     <b-row>
       <b-col v-for="(data, index) in cardData" :key="index" cols="6" class="mb-4">
-        <b-card
-          :header="data.header"
-          :header-tag="data.headerTag"
-          :class="data.class"
-        >
+        <b-card :class="data.className">
+        <b-card-title>{{data.header}}</b-card-title>
         <b-card-text>
           {{index}}
         </b-card-text>
@@ -21,41 +18,35 @@
 </template>
 
 <script lang="ts">
-
-type CardView = {
-  header: string,
-  headerTag: string,
-  class: string,
-  cardText: string,
-};
-
 import { Component, Vue } from 'vue-property-decorator';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+
+@Component
 export default class Skill extends Vue {
-  public cardData: CardView[] = [
+  private cardData: object[] = [
     {
       header: 'C++',
       headerTag: 'card-header',
-      class: 'skill-card',
+      className: 'skill-card',
       cardText: 'this is test',
     },
     {
       header: 'C#',
       headerTag: 'card-header',
-      class: 'skill-card',
+      className: 'skill-card',
       cardText: 'this is test',
     },
     {
       header: 'JavaScript/ TypeScript',
       headerTag: 'card-header',
-      class: 'skill-card',
+      className: 'skill-card',
       cardText: 'this is test',
     },
     {
       header: 'Java',
       headerTag: 'card-header',
-      class: 'skill-card',
+      className: 'skill-card',
       cardText: 'this is test',
     },
   ];

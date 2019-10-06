@@ -13,20 +13,5 @@ export default new Router({
       name: 'home',
       component: Home,
     },
-    {
-      path: '/portfolios',
-      name: 'portfolios',
-      component: () => import('./views/Portfolios.vue'),
-    },
-    {
-      path: '/blog',
-      name: 'blog',
-      component: () => import('./views/Blog.vue'),
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: () => import('./views/Contact.vue'),
-    },
   ],
 });

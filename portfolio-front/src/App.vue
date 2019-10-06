@@ -5,10 +5,12 @@
       <h2>Enginnering Student</h2>
     </header>
     <nav>
-      <router-link to="/" class="nav-element">ホーム</router-link>
-      <router-link to="/about" class="nav-element">製作物</router-link>
-      <router-link to="/blog" class="nav-element">ブログ/Qiita</router-link>
-      <router-link to="/contact" class="nav-element">連絡先</router-link>
+      <ul>
+        <li class="nav-element">ホーム</li>
+        <li class="nav-element">製作物</li>
+        <li class="nav-element">ブログ/Qiita</li>
+        <li class="nav-element">連絡先</li>
+      </ul>
     </nav>
     <router-view/>
     <footer class="pt-5 pb-3">

@@ -29,7 +29,12 @@
       <div class="skills pt-5">
         <i class="fas fa-bookmark fa-3x pr-3 pb-5"></i>
         <span class="title">SKILLS</span>
-        <skill></skill>
+        <Skill></Skill>
+      </div>
+      <div class="blog pt-5">
+        <i class="fas fa-rss-square fa-3x pr-3 pb-5"></i>
+        <span class="title">BLOG / Qiita</span>
+        <Blog></Blog>
       </div>
     </div>
   </b-container>
@@ -37,13 +42,15 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import Blog from '@/components/Blog.vue';
+import Skill from '@/components/Skill.vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
-import Skill from '@/components/Skill.vue';
 
 @Component({
   components: {
     Skill,
+    Blog,
   },
 })
 export default class Home extends Vue {}
