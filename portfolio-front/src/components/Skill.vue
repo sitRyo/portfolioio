@@ -1,57 +1,65 @@
 <template>
   <div class="root">
   <b-container class="skill">
+    <!-- <template v-for="data in cardData"> -->
     <b-row>
-      <b-col>
+      <b-col v-for="(data, index) in cardData" :key="index" cols="6" class="mb-4">
         <b-card
-          header="C++"
-          header-tag="card-header"
-          class="skill-card"
+          :header="data.header"
+          :header-tag="data.headerTag"
+          :class="data.class"
         >
         <b-card-text>
-          
+          {{index}}
         </b-card-text>
         </b-card>
       </b-col>
-      <b-col>
-        <b-card
-          header="JavaScript / TypeScript"
-          header-tag="card-header"
-          class="skill-card"
-        >
-        <b-card-text>this is test</b-card-text>
-        </b-card>
-      </b-col>
     </b-row>
-    <b-row class="mt-3">
-      <b-col>
-        <b-card
-          header="Java"
-          header-tag="card-header"
-          class="skill-card"
-        >
-        <b-card-text>this is test</b-card-text>
-        </b-card>
-      </b-col>
-      <b-col>
-        <b-card
-          header="C#"
-          header-tag="card-header"
-          class="skill-card"
-        >
-        <b-card-text>this is test</b-card-text>
-        </b-card>
-      </b-col>
-    </b-row>
+    <!-- </template> -->
   </b-container>
   </div>
 </template>
 
 <script lang="ts">
+
+type CardView = {
+  header: string,
+  headerTag: string,
+  class: string,
+  cardText: string,
+};
+
 import { Component, Vue } from 'vue-property-decorator';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
-export default class Skill extends Vue {}
+export default class Skill extends Vue {
+  public cardData: CardView[] = [
+    {
+      header: 'C++',
+      headerTag: 'card-header',
+      class: 'skill-card',
+      cardText: 'this is test',
+    },
+    {
+      header: 'C#',
+      headerTag: 'card-header',
+      class: 'skill-card',
+      cardText: 'this is test',
+    },
+    {
+      header: 'JavaScript/ TypeScript',
+      headerTag: 'card-header',
+      class: 'skill-card',
+      cardText: 'this is test',
+    },
+    {
+      header: 'Java',
+      headerTag: 'card-header',
+      class: 'skill-card',
+      cardText: 'this is test',
+    },
+  ];
+}
 
 </script>
 
